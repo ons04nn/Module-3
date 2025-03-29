@@ -1147,7 +1147,6 @@ background-size: cover;
     }
 
     .slon {
-        display: flex;
         position: relative;
         margin: 0;
         transform:none;
