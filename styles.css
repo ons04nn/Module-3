@@ -62,10 +62,9 @@ header {
 footer {
     
     text-align: center;
-    padding: 20px 10px;
     font-size: 0.9rem;
-    padding-top: 150px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+
 }
 
 
@@ -136,6 +135,13 @@ cursor: pointer;
     cursor: pointer;
 }
 
+.align-flexst {
+
+    
+align-items: flex-start
+
+}
+
 .wrapper {
     display: flex;
     justify-content: space-between;
@@ -192,6 +198,7 @@ cursor: pointer;
     align-items: flex-start;
 }
 
+.align-center {align-items: center;}
 .big {
     font-size: xx-large;
 }
@@ -199,6 +206,10 @@ cursor: pointer;
 
 .mini-gap {
     gap:5px;
+}
+
+.gap-15 {
+    gap:15px;
 }
 .container-hor {
     display: flex;
@@ -245,7 +256,6 @@ cursor: pointer;
 }
 
 
-
 .background {
     background-position: 50%;
     display: flex;
@@ -273,18 +283,23 @@ cursor: pointer;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-left: 400px;
-    margin-top: -330px; 
+    margin-top: 130px; 
+}
+
+
+.bl1340 {width: 1340px;
+    height: 1px;
 }
 
 .slon {
   
-
+    overflow:hidden;
     position: absolute;
     top: 1378px;
     left: 50%;
     transform: translate(-50%, -50%); /* Центрирует */
     margin-left: 300px; /* Смещение вправо */
-    margin-top: -80px; /* Смещение вверх */
+    margin-top: -120px; /* Смещение вверх */
   }
 
 
@@ -303,6 +318,8 @@ cursor: pointer;
     
     
 }
+
+
 
 
 .benefits {
@@ -335,6 +352,7 @@ h2 {
     font-family: 'Involve', Inter, sans-serif;
     font-variation-settings: 'wght' 500; 
     color: white;
+    line-height: 100%;
 }
 
 h3 {
@@ -388,8 +406,6 @@ h5 {
 
 }
 
-  @media (max-width: 500px) {
-  }
 
  
   
@@ -472,7 +488,11 @@ p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    background-repeat: no-repeat;
+    justify-content: center;
 }
+
+
 .btn {
     display: flex;
     width:auto;
@@ -504,6 +524,8 @@ p {
     color: #000;
     border: 2px solid #000;
   }
+
+  
   
   .white-btn:hover {
     background-color: #f0f0f0;
@@ -706,6 +728,10 @@ margin-bottom: 30px;}
 
  /* Основные стили */
 .articles {
+    padding: 60px 0;
+  }
+
+  .video {
     padding: 60px 0;
   }
   
@@ -957,6 +983,7 @@ background-size: cover;
 
     .wrapper2 {
         display: flex; 
+        gap:30px;
     }
 
     .block-hide {
@@ -968,6 +995,9 @@ background-size: cover;
         display: flex;
       }
 
+      .cloud-btn {
+        border: none;
+    }
 
   @media (min-width: 1400px) {
   .menu-icon {
@@ -989,7 +1019,24 @@ background-size: cover;
   @media (max-width: 1400px) {
 
 
+    .container { 
 
+        max-width: 700px;
+    }
+    .cloud-bg {
+        background-image: url(./src/assets/images/bg_cloud-1400.png);
+        background-position: 50%;
+        border-radius: 24px;
+        width: 700px;
+        height: 680px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    
   
 
     .blocks-grid {
@@ -1051,6 +1098,7 @@ background-size: cover;
 
     h2 {
         display: flex;
+        line-height: 100%;
         
     }
     .why-sleep {
@@ -1107,6 +1155,12 @@ background-size: cover;
     
   }
 
+  .wrapper2 {
+    display: flex; 
+    flex-direction: column;
+    gap:0;
+}
+
 }
 
 
@@ -1119,6 +1173,34 @@ background-size: cover;
 
   
     @media (max-width: 900px) {
+
+
+        .align-flexst{
+            align-items: center;
+        }
+        .slon-footer {
+
+            transform:scale(0.6)
+        }
+
+        .container { 
+
+            max-width: 500px;
+        }
+
+        
+        .cloud-bg {
+            background-image: url(./src/assets/images/bg_cloud-1400.png);
+            background-position: 50%;
+            border-radius: 24px;
+            width: 500px;
+            height: 700px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
         .cloud {
             display: flex;
             position: relative;
@@ -1131,10 +1213,9 @@ background-size: cover;
       
         }
 
-        .wrapper2 {
-            display: flex; 
-            flex-direction: column;
-        }
+        
+
+
        
         .block_large{width: 500px;}
         .block_mid{width: 500px;}
@@ -1181,9 +1262,7 @@ background-size: cover;
             flex-direction: column; 
         }
 
-        .container {
-           
-        }
+    
 
         h2 {font-size: 45px;}
         h3 {font-size: 18px;}
@@ -1194,6 +1273,24 @@ background-size: cover;
 
 
   @media (max-width: 500px) {
+
+   
+        .container {
+            max-width: 350px;
+        }
+     
+
+    .cloud-bg {
+        background-image: url(./src/assets/images/bg_cloud-m.png);
+        background-position: 50%;
+        border-radius: 24px;
+        width: 350px;
+        height: 241px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
 
     .block {
@@ -1216,12 +1313,13 @@ background-size: cover;
       }
 
     .btn {
-        width:140px;
+        width:150px;
         height: 30px;
          margin: 0;
          align-items: center;
          border: 0;
-         padding: 0;
+         padding: 5px;
+
          justify-content: center;
        }
 
