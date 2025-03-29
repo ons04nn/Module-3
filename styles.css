@@ -60,12 +60,11 @@ header {
 }
 
 footer {
-    
+  display: flex;
+  align-items: center;
     text-align: center;
-    font-size: 0.9rem;
+    justify-content: center;
     padding-top: 100px;
-    max-width: 100%;
-
 }
 
 
@@ -192,11 +191,19 @@ align-items: flex-start
   position: absolute; /* Нужно для расчета положения логотипа */
   }
 
+  .container-foot {
+    display: flex;
+    flex-direction: row;
+  }
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     align-items: flex-start;
+      max-width: 1340px;
+      margin: 0 auto;
+    
 }
 
 .container2 {
@@ -285,6 +292,8 @@ align-items: flex-start
     margin-bottom: 200px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    
 }
 
 .cloud {
@@ -744,11 +753,6 @@ margin-bottom: 30px;}
     padding: 60px 0;
   }
   
-  .container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
   
   .section-title {
     font-size: 2.5rem;
@@ -1029,9 +1033,9 @@ background-size: cover;
 
 
     .container { 
-
         max-width: 700px;
     }
+
     .cloud-bg {
         background-image: url(./src/assets/images/bg_cloud-1400.png);
         background-position: 50%;
@@ -1138,7 +1142,7 @@ background-size: cover;
     }
     .stats{
         flex-direction: column;  
-        align-items: center;
+        align-items: flex-start;
         margin-top: 0px;
     }
 
@@ -1159,8 +1163,7 @@ background-size: cover;
   .column-slon {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     
   }
 
@@ -1170,6 +1173,9 @@ background-size: cover;
     gap:0;
 }
 
+.container-foot{
+  flex-direction: column;
+}
 }
 
 
@@ -1183,6 +1189,8 @@ background-size: cover;
   
     @media (max-width: 900px) {
 
+      
+
 
         .align-flexst{
             align-items: center;
@@ -1193,7 +1201,6 @@ background-size: cover;
         }
 
         .container { 
-
             max-width: 500px;
         }
 
@@ -1201,8 +1208,7 @@ background-size: cover;
             display: flex;
             align-items: center;
             text-align: center;
-            font-size: 0.9rem;
-            padding-top: 100px;
+            padding-top: 30px;
             transform: scale(0.7);
         
         }
