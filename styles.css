@@ -256,6 +256,10 @@ align-items: flex-start
     background-color: #090923;
     background-image: url(bg1.png);
     background-size: cover;
+    display:flex;
+    align-items: center;
+    
+
 }
 
 .card1 { background-image: url("./src/assets/images/Cards/mini_cards/1.png");}
@@ -1155,6 +1159,7 @@ background-size: cover;
     .card{
                 width: calc(100% / 2 - 24px);
                 gap:25px;
+                
                 
             }
     .stats{
