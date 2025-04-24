@@ -238,23 +238,24 @@ align-items: flex-start
 }
 
 .cards {
-    display: flex;
-    margin-top: 60px;
-    gap:24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 60px;
     
 }
 
 .card {
-    padding:40px;
-    padding-top: 52px;
-    gap:90px;
-    padding-bottom: 47px;
+    width: calc(100% / 4 - 24px);
+    height: 300px;
+    background-color: #fff;
+    border-radius: 24px;
+    color: #000;
+    padding: 24px;
+    font-size: 30px;
+    background-color: #090923;
+    background-image: url(bg1.png);
     background-size: cover;
-    background-repeat: no-repeat;
-    width: 317px;
-    height: 364px;
-    display: flex;
-    flex-direction: column;
 }
 
 .card1 { background-image: url("./src/assets/images/Cards/mini_cards/1.png");}
@@ -285,7 +286,7 @@ align-items: flex-start
 
 .why-sleep {
     padding-top: 197px;
-    margin-bottom: 200px;
+    margin-bottom: 160px;
     
     
 }
@@ -295,7 +296,7 @@ align-items: flex-start
     left: 50%;
     transform: translate(-50%, -50%);
     margin-left: 400px;
-    margin-top: 130px; 
+    margin-top: -300px; 
 }
 
 
@@ -323,10 +324,7 @@ align-items: flex-start
 
 
 .features {
-    margin-bottom: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-bottom: 160px;
 }
 
 .hero {
@@ -387,7 +385,7 @@ h3 {
 h4 {
    
         font-family: 'Involve', Inter, sans-serif;
-        line-height:150%;
+        line-height:100%;
         font-variation-settings: 'wght' 400; 
         color: black;
         font-size: 36px;
@@ -412,7 +410,7 @@ h5 {
  
 
     font-size: 1rem; 
-    margin-top: 0.5em;
+    margin-top: 1em;
     
        
     display: -webkit-box;
@@ -657,9 +655,7 @@ li {
 }
 
 .content {
-   display: flex;
-   align-items: center;
-   flex-direction: column;
+
 }
 
 
@@ -751,7 +747,7 @@ margin-bottom: 30px;}
   }
 
   .video {
-    padding: 60px 0;
+    padding: 80px 0;
   }
   
   
@@ -771,6 +767,21 @@ margin-bottom: 30px;}
       "large large mid"
       "small1 small2 small3";
   }
+
+   .blocks-grid-video {
+    margin-top:50px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 24px;
+    grid-template-areas:
+      "xxl long1"
+      "xxl long2"
+      "xxl long3"
+      "xxl long4"
+      
+  }
+
   
   .block {
     background: white;
@@ -791,6 +802,12 @@ margin-bottom: 30px;}
     border-radius: 24px;
     height: 599px;
   }
+  .block_xxl {
+    grid-area: xxl;
+    border-radius: 24px;
+    height: 599px;
+    
+  }
   
   .block_mid {
     grid-area: mid;
@@ -801,6 +818,10 @@ margin-bottom: 30px;}
   .block_small {
     border-radius: 24px;
     height: 400px;
+  }
+  .block_long {
+    border-radius: 24px;
+    height: 123px;
   }
   
   /* Контент блоков */
@@ -821,7 +842,7 @@ margin-bottom: 30px;}
 
   .mid-content {
     padding: 15px;
-    height: 80%;
+    height: 90%;
     justify-content: space-between;
   }
   
@@ -845,39 +866,7 @@ margin-bottom: 30px;}
   }
 
   
-@media (max-width: 500px) {
-    .block-meta {
-      gap: 5px;
-    }
-    
-    .block-tag {
-      font-size: 13px;
-      padding: 2px 6px;
-      max-width: 100%;
-    }
-    
-    .block-date {
-      font-size: 11px;
-      margin-left: auto; 
-    }
-  }
-  
-  .block-date {
-    color: #666;
-  }
-  
-  .block-title {
-    margin: 0;
-    line-height: 1;
-  }
-  
- 
 
-  .articles {
-      
-    display: flex;
-    justify-content: center;
-}
   /*burger*/
   
   main {
@@ -1014,6 +1003,10 @@ background-size: cover;
         border: none;
     }
 
+    .benefito {
+    margin-top:100px;
+   }
+
   @media (min-width: 1400px) {
   .menu-icon {
     display: none;
@@ -1033,9 +1026,12 @@ background-size: cover;
 
   @media (max-width: 1400px) {
 
+
+.block_xxl{height: 255px;}
    
     .container { 
         max-width: 700px;
+            margin: 0 auto;
     }
 
     .cloud-bg {
@@ -1063,6 +1059,17 @@ background-size: cover;
           "small3 small4";
       }
     
+     .blocks-grid-video {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+        grid-template-areas:
+          "xxl"
+          "long1"
+          "long2"
+          "long3"
+          "long4"
+
+  }
     
   
   
@@ -1073,9 +1080,11 @@ background-size: cover;
         display:block
       }
 
-    .block_large{width: 700px; }
+    .block_large{width: 700px;}
+   
     .block_mid{width: 700px; height: auto;}
-    .block_small{width: 338px; }
+    .block_small{width: 100%;}
+    .block_long{width: 100%;}
 
     
     
@@ -1095,6 +1104,7 @@ background-size: cover;
     .sky {
         background-image: url(./src/assets/images/Cards/Sky/bg_sky_1400.png);
         height: 1580px;
+        margin-bottom: -180px;
     }
 .sky-text{
         gap:20px;
@@ -1139,9 +1149,14 @@ background-size: cover;
     }
     
     .cards{
-        flex-direction: column; 
-        align-items: center;
+        flex-direction: row;
     }
+
+    .card{
+                width: calc(100% / 2 - 24px);
+                gap:25px;
+                
+            }
     .stats{
         flex-direction: column;  
         align-items: flex-start;
@@ -1203,8 +1218,14 @@ background-size: cover;
             transform:scale(0.6)
         }
 
+  .benefito {
+    margin-top:40px;
+   }
+
         .container { 
             max-width: 500px;
+                margin: 0 auto;  
+                 
         }
 
         footer {
@@ -1242,17 +1263,9 @@ background-size: cover;
 
         
 
-
-       
-        .block_large{width: 500px;}
-        .block_mid{width: 500px;}
-        .block_small{width: 235px;}
+.block_long{max-width: 100%;}
             
-            .block_large,
-            .block_mid,
-            .block_small {
-              aspect-ratio: 16/9;
-            }
+         
             
             .block-image {
               height: 50%;
@@ -1281,10 +1294,7 @@ background-size: cover;
 
 
 
-        .cards{
-            flex-direction: column; 
-            align-items: center; 
-        }
+      
         .parter-card {
             flex-direction: column; 
         }
@@ -1300,6 +1310,46 @@ background-size: cover;
 
 
   @media (max-width: 500px) {
+
+    .benefito {
+    margin-top:0px;
+   }
+
+.sky-text{
+        margin-top: 20px;  }
+
+    .block-meta {
+      gap: 5px;
+    }
+    
+    .block-tag {
+      font-size: 13px;
+      padding: 2px 6px;
+      max-width: 100%;
+    }
+    
+    .block-date {
+      font-size: 11px;
+      margin-left: auto; 
+    }
+  
+  
+  .block-date {
+    color: #666;
+  }
+  
+  .block-title {
+    margin: 0;
+    line-height: 1;
+  }
+  
+ 
+
+  .articles {
+      
+    display: flex;
+    justify-content: center;
+}
 
 
 
@@ -1330,10 +1380,16 @@ background-size: cover;
       .block_large {width: 350px;
         height: 239px;
     border-radius: 24px;}
+    .block_xxl {width: 350px;
+        height: 239px;
+    border-radius: 24px;}
       .block_mid{width: 350px;
         height: 120px;
         border-radius: 24px;}
-      .block_small{width: 160px;
+      .block_small{width: 100%;
+        height: 192px;
+        border-radius: 24px;}
+        .block_small{width: 100%;
         height: 192px;
         border-radius: 24px;}
       .blocks {
@@ -1342,7 +1398,7 @@ background-size: cover;
       }
 
     .btn {
-        width:150px;
+        width:100%;
         height: 30px;
          margin: 0;
          align-items: center;
@@ -1355,9 +1411,8 @@ background-size: cover;
     .sky {
         background-image: url(./src/assets/images/Cards/Sky/bg_sky_m.png);
         background-position: 50%;
-        background-size: 100%;
         height: 390px;
-        width: 100%;
+        margin-bottom: 0px;
       
     }
 
@@ -1387,7 +1442,8 @@ background-size: cover;
 
 .arrow {transform: scale(0.4);}
 
-
+.card { width: 100%;
+}
 
     .card1 { background-image: url("./src/assets/images/Cards/mini_cards/1m.png");}
 .card2 { background-image: url("./src/assets/images/Cards/mini_cards/2m.png");}
@@ -1409,7 +1465,7 @@ line-height: 100%;}
   .hh {font-size: 64px;}
   
   .why-sleep {
-    padding-top: -50px;
+    padding-top: 0px;
     margin-bottom: 100px;}
 
     button {
@@ -1450,16 +1506,11 @@ line-height: 100%;}
 
             .taste {margin-bottom: 0px;}
 
-            .features {margin-bottom: 0px;}
+            .features {margin-bottom: 100px;}
 
-            .card{
-                height: 270px;
-                gap:25px
-            }
+            
 
-            .card4{
-                margin-bottom: 100px;
-            }
+           
           
 
 
